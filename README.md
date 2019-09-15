@@ -19,7 +19,7 @@ Control Flow adalah cara kita mengatur jalan penyataan, instruksi, dan pemanggil
 Percabangan memungkinkan kita untuk menentukan kode manakah yang akan kita eksekusi berdasarkan suatu kondisi. Percabangan di bahasa C ada 4, yaitu `if`, `if-else`, `if-else-if`, dan `switch`.
 
 ## Percabangan IF
----
+
 Sintaks yang digunakan dalam percabangan menggunakan if adalah sebagai berikut.
 ```c
 if (<Ekspresi/Kondisi>){
@@ -50,7 +50,7 @@ int main(void)
 }
 ```
 ## Percabangan If Else
----
+
 Sintaks yang digunakan dalam percabangan menggunakan if-else adalah sebagai berikut.
 ```c
 if (<Ekspresi/Kondisi>){
@@ -87,7 +87,7 @@ int main(void)
 }
 ```
 ## Percabangan If-Elseif
----
+
 Sintaks yang digunakan dalam percabangan menggunakan if-else if adalah sebagai berikut.
 ```c
 if (<Ekspresi/Kondisi>){
@@ -107,7 +107,7 @@ Cara kerja percabangan if-else yaitu memeriksa kondisi dalam if.
 - Apabila kita menyediakan statement else diakhir, maka ketika **seluruh kondisi** if dan else if tidak memenuhi atau **FALSE (0)**, maka secara otomatis ia akan **menjalankan perintah di dalam else** tersebut.
 
 ## Percabangan Case Switch
----
+
 Selain penggunaan statemen if untuk memilih diantara banyak alternatif, terdapat pula statemen switch yang memiliki fungsi yang sama, untuk memilih diantara banyak alternatif berdasarkan sebuah kondisi. Kondisi pada statemen switch berisi ekspresi yang dapat menggunakan sebuah variable tunggal bertipe int atau char yang akan diperiksa nilainya di setiap blok case.
 
 Sintaks untuk Case Switch:
@@ -164,4 +164,4 @@ Dalam contoh diatas, **ekspresi** yang digunakan adalah **PlatNomor**, dimana **
 Perulangan atau looping memungkinkan kita untuk mengeksekusi potongan kode berulang-ulang hingga mencapai suatu kondisi. Ada 3 jenis perulangan dalam bahasa C, yaitu `while`, `do - while`, dan `for`.
 
 ## Perulangan While
----
+
