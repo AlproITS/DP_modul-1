@@ -27,7 +27,7 @@ Sintaks yang digunakan dalam percabangan menggunakan `if` adalah sebagai berikut
 ```c
 if (<Ekspresi/Kondisi>) {
 
-	//kode yang akan dieksekusi jika kondisi tersebut benar
+    //kode yang akan dieksekusi jika kondisi tersebut benar
 
 }
 ```
@@ -60,11 +60,11 @@ Sintaks yang digunakan dalam percabangan menggunakan `if-else` adalah sebagai be
 ```c
 if (<Ekspresi/Kondisi>) {
 
-	//kode yang akan dieksekusi jika kondisi tersebut benar
+    //kode yang akan dieksekusi jika kondisi tersebut benar
 
 }else {
 
-	//kode yang akan dieksekusi jika kondisi tersebut salah
+    //kode yang akan dieksekusi jika kondisi tersebut salah
 
 }
 ```
@@ -100,11 +100,11 @@ Sintaks yang digunakan dalam percabangan menggunakan `if-else if` adalah sebagai
 ```c
 if (<Ekspresi/Kondisi>){
 
-	//kode yang akan dieksekusi jika kondisi tersebut benar
+    //kode yang akan dieksekusi jika kondisi tersebut benar
 
 }else if (<Ekspresi/Kondisi>){
 
-	//kode yang akan dieksekusi jika kondisi tersebut salah
+    //kode yang akan dieksekusi jika kondisi tersebut salah
 
 }
 // boleh menambahkan else{} apabila perlu
@@ -176,11 +176,11 @@ Perulangan `while` adalah bentuk perulangan yang paling sederhana. Sintaksnya ad
 ```c
 //initial value i.e. i=0
 while (<Ekspresi/Kondisi>) {
-	// Potongan kode yang ingin dieksekusi
-	.
-	.
-	.
-	// increment/decrement misalnya, i++
+    // Potongan kode yang ingin dieksekusi
+    .
+    .
+    .
+    // increment/decrement misalnya, i++
 }
 ```
 Cara kerja perulangan while mirip dengan if. Jika pada **if** potongan kode akan dieksekusi **sekali saja** apabila ekspresi/kondisi bernilai **TRUE**, pada **while** potongan kode akan **terus dieksekusi** hingga ekspresi/kondisi menghasilkan **FALSE**.
@@ -210,10 +210,10 @@ Sehingga pada contoh diatas,
 Sintaks dari perulangan `do – while` adalah sebagai berikut.
 ```c
 do {
-	// Potongan kode yang dieksekusi 	.
-	.
-	.
-	// increment/decrement
+    // Potongan kode yang dieksekusi.
+    .
+    .
+    // increment/decrement
 } while (<Ekspresi/Kondisi>)
 ```
 Cara kerja dari perulangan `do – while` mirip dengan perulangan while. Hanya saja, pada perulangan `do – while`, potongan kode dijamin akan dieksekusi tepat satu kali sebelum mengevaluasi ekspresi/kondisi.
@@ -239,9 +239,9 @@ int main()
 Perulangan `for` merupakan perulangan paling rumit diantara perulangan lainnya. Sintaksnya adalah sebagai berikut.
 ```c
 for (init_statement; kondisi/ekspresi; end_statement) {
-		//  Potongan kode yang dieksekusi
-		.
-		.
+//  Potongan kode yang dieksekusi
+.
+.
 }
 ```
 Cara kerjanya adalah sebagai berikut :
@@ -274,10 +274,10 @@ int main()
 Sama seperti halnya percabangan, perulangan juga dapat dibuat secara bersarang, tentu saja menyesuaikan kebutuhan. Contoh sintaks perulangan bersarang adalah sebagai berikut. 
 ```c
 for (init_statement1; kondisi1/ekspresi1; end_statement1) {
-	for (init_statement2; kondisi2/ekspresi2; end_statement2) {
-		//  Potongan kode yang dieksekusi
-		.
-		.
+    for (init_statement2; kondisi2/ekspresi2; end_statement2) {
+        //  Potongan kode yang dieksekusi
+        .
+        .
     }
 }
 ```
@@ -331,7 +331,7 @@ int main()
 # Latihan Soal
 _Harap tidak melakukan tindakan **plagiarisme** dalam pengerjaan !_
 
-1. Buat program yang mengoutputkan kata-kata `Ganjil` untuk bilangan ganjil, dan kata-kata `Genap` untuk bilangan genap dari sebuah input, contoh
+1. Buat program yang mencetak kata `Ganjil` untuk bilangan ganjil, dan kata `Genap` untuk bilangan genap dari sebuah input, contoh
 
     Input
 
@@ -345,7 +345,7 @@ _Harap tidak melakukan tindakan **plagiarisme** dalam pengerjaan !_
     Ganjil
     ```
 
-2. Buat program untuk mengoutputkan asterisk, `*`, untuk bilangan genap, dan bilangan aslinya untuk bilangan ganjil, dari n buah bilangan mulai 1 s.d n, contoh
+2. Buat program untuk mencetak asterisk, `*`, untuk bilangan genap, dan bilangan aslinya untuk bilangan ganjil, dari n buah bilangan mulai 1 s.d n, contoh
 
     Input
 
@@ -359,7 +359,7 @@ _Harap tidak melakukan tindakan **plagiarisme** dalam pengerjaan !_
     1 * 3 * 5 *
     ```
     
-3. Buat program untuk mengoutputkan asterisk, `*`, untuk bilangan prima, dan angka asli untuk bilangan non-prima dari n buah bilangan mulai 2 s.d n, contoh
+3. Buat program untuk mencetak asterisk, `*`, untuk bilangan prima, dan angka asli untuk bilangan non-prima dari n buah bilangan mulai 2 s.d n, contoh
 
     Input
 
