@@ -333,7 +333,7 @@ Harap tidak melakukan tindakan plagiarisme dalam pengerjaan !
 3. Buat program untuk mengoutputkan asterisk, `*`, untuk bilangan prima, dan angka asli untuk bilangan non-prima dari n buah bilangan mulai 2 s.d n, contoh
     ```
     input  : n = 10
-    output : 2 * * 4 * 6 * 8 9 10
+    output : * * 4 * 6 * 8 9 10
     ```
 
 ## Referensi
