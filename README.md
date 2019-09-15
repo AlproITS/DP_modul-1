@@ -18,7 +18,8 @@ Control Flow adalah cara kita mengatur jalan penyataan, instruksi, dan pemanggil
 # Percabangan
 Percabangan memungkinkan kita untuk menentukan kode manakah yang akan kita eksekusi berdasarkan suatu kondisi. Percabangan di bahasa C ada 4, yaitu `if`, `if-else`, `if-else-if`, dan `switch`.
 
-# Percabangan IF
+## Percabangan IF
+---
 Sintaks yang digunakan dalam percabangan menggunakan if adalah sebagai berikut.
 ```c
 if (<Ekspresi/Kondisi>){
@@ -30,7 +31,7 @@ if (<Ekspresi/Kondisi>){
 Cara kerja percabangan if yaitu memeriksa dan mengevaluasi suatu kondisi untuk menentukan apakah instruksi selanjutnya dalam bracket akan dijalankan atau tidak oleh program.
 - Jika kondisi tersebut bernilai **TRUE (1)**, kode yang di dalam bracket akan **dieksekusi**. 
 - Sebaliknya jika kondisi tersebut bernilai **FALSE (0)**, kode yang di dalam bracket **tidak akan dieksekusi**.
-## Contoh
+### Contoh
 Sebagai contoh, di dashboard mobil terdapat indikator bahan bakar yang akan **menyala jika bahan bakar yang tersisa kurang dari level tertentu (misal kurang dari 10 liter)** dengan kondisi “Apakah bahan bakar kurang dari 10 liter?”.
 
 Pada kasus ini terdapat kondisi
@@ -48,7 +49,8 @@ int main(void)
     }
 }
 ```
-# Percabangan If Else
+## Percabangan If Else
+---
 Sintaks yang digunakan dalam percabangan menggunakan if-else adalah sebagai berikut.
 ```c
 if (<Ekspresi/Kondisi>){
@@ -64,7 +66,7 @@ if (<Ekspresi/Kondisi>){
 Cara kerja percabangan if-else yaitu memeriksa kondisi dalam if.
 - Jika kondisi tersebut bernilai **TRUE (1)**, Program akan **menjalankan kode di dalam bracket if**.
 - Sebaliknya jika kondisi tersebut bernilai **FALSE (0)**, kode di bawah **else** lah **yang akan dijalankan**.
-## Contoh
+### Contoh
 Sebagai contoh, kita ingin mencari tahu apakah seseorang absen dari kelas atau tidak. **Apabila ia tidak hadir, maka absensinya akan dicoret (bernilai X)**, dan **apabila hadir, maka absensinya akan di centang (bernilai V)**.
 
 Sehingga dari kasus tersebut, didapat dua alternatif kondisi.
@@ -84,7 +86,8 @@ int main(void)
     }
 }
 ```
-# Percabangan If-Elseif
+## Percabangan If-Elseif
+---
 Sintaks yang digunakan dalam percabangan menggunakan if-else if adalah sebagai berikut.
 ```c
 if (<Ekspresi/Kondisi>){
@@ -103,7 +106,8 @@ Cara kerja percabangan if-else yaitu memeriksa kondisi dalam if.
 - Apabila kondisi pertama tidak memenuhi, maka ia akan memerika kondisi didalam else if, apabila bernilai **TRUE (1)**, maka ia akan **menjalankan perintah dalam bracket tersebut**, apabila tidak maka ia akan menjalankan sequence selanjutnya.
 - Apabila kita menyediakan statement else diakhir, maka ketika **seluruh kondisi** if dan else if tidak memenuhi atau **FALSE (0)**, maka secara otomatis ia akan **menjalankan perintah di dalam else** tersebut.
 
-# Percabangan Case Switch
+## Percabangan Case Switch
+---
 Selain penggunaan statemen if untuk memilih diantara banyak alternatif, terdapat pula statemen switch yang memiliki fungsi yang sama, untuk memilih diantara banyak alternatif berdasarkan sebuah kondisi. Kondisi pada statemen switch berisi ekspresi yang dapat menggunakan sebuah variable tunggal bertipe int atau char yang akan diperiksa nilainya di setiap blok case.
 
 Sintaks untuk Case Switch:
@@ -125,7 +129,7 @@ switch(ekspresi) {
 }
 ```
 Setiap blok, case harus ditambahkan statement **``break``**, karena apabila tidak maka ia akan tetap menjalankan blok case dibawahnya hingga bertemu break lain atau pada akhir blok switch.
-## Contoh
+### Contoh
 ```c
 #include <stdio.h>
 int main(void)
@@ -159,4 +163,5 @@ Dalam contoh diatas, **ekspresi** yang digunakan adalah **PlatNomor**, dimana **
 # Perulangan
 Perulangan atau looping memungkinkan kita untuk mengeksekusi potongan kode berulang-ulang hingga mencapai suatu kondisi. Ada 3 jenis perulangan dalam bahasa C, yaitu `while`, `do - while`, dan `for`.
 
-# Perulangan While
+## Perulangan While
+---
