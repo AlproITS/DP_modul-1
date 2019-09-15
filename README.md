@@ -19,22 +19,24 @@
 Control Flow adalah cara kita mengatur jalan penyataan, instruksi, dan pemanggilan fungsi  suatu program. Tanpa control flow, program kita hanya bergerak dari atas ke bawah saja (**sequential**). control flow bahasa C ada 2, yaitu percabangan (**selection**) dan perulangan (**repetition**).
 
 # Percabangan
-Percabangan memungkinkan kita untuk menentukan kode manakah yang akan kita eksekusi berdasarkan suatu kondisi. Percabangan di bahasa C ada 4, yaitu `if`, `if-else`, `if-else-if`, dan `switch`.
+Percabangan memungkinkan kita untuk menentukan kode manakah yang akan kita eksekusi berdasarkan suatu kondisi. Percabangan di bahasa C ada 4, yaitu `if`, `if-else`, `if-else if`, dan `switch`.
 
 ## Percabangan IF
 
 Sintaks yang digunakan dalam percabangan menggunakan `if` adalah sebagai berikut.
 ```c
-if (<Ekspresi/Kondisi>){
+if (<Ekspresi/Kondisi>) {
 
-		//kode yang akan dieksekusi jika kondisi tersebut benar
+	//kode yang akan dieksekusi jika kondisi tersebut benar
 
 }
 ```
 Cara kerja percabangan if yaitu memeriksa dan mengevaluasi suatu kondisi untuk menentukan apakah instruksi selanjutnya dalam bracket akan dijalankan atau tidak oleh program.
 - Jika kondisi tersebut bernilai **TRUE (1)**, kode yang di dalam bracket akan **dieksekusi**. 
 - Sebaliknya jika kondisi tersebut bernilai **FALSE (0)**, kode yang di dalam bracket **tidak akan dieksekusi**.
-### Contoh
+
+Contoh
+
 Sebagai contoh, di dashboard mobil terdapat indikator bahan bakar yang akan **menyala jika bahan bakar yang tersisa kurang dari level tertentu (misal kurang dari 10 liter)** dengan kondisi “Apakah bahan bakar kurang dari 10 liter?”.
 
 Pada kasus ini terdapat kondisi
@@ -56,20 +58,22 @@ int main()
 
 Sintaks yang digunakan dalam percabangan menggunakan `if-else` adalah sebagai berikut.
 ```c
-if (<Ekspresi/Kondisi>){
+if (<Ekspresi/Kondisi>) {
 
-		//kode yang akan dieksekusi jika kondisi tersebut benar
+	//kode yang akan dieksekusi jika kondisi tersebut benar
 
-}else{
+}else {
 
-		//kode yang akan dieksekusi jika kondisi tersebut salah
+	//kode yang akan dieksekusi jika kondisi tersebut salah
 
 }
 ```
 Cara kerja percabangan if-else yaitu memeriksa kondisi dalam if.
 - Jika kondisi tersebut bernilai **TRUE (1)**, Program akan **menjalankan kode di dalam bracket if**.
 - Sebaliknya jika kondisi tersebut bernilai **FALSE (0)**, kode di bawah **else** lah **yang akan dijalankan**.
-### Contoh
+
+Contoh
+
 Sebagai contoh, kita ingin mencari tahu apakah seseorang absen dari kelas atau tidak. **Apabila ia tidak hadir, maka absensinya akan dicoret (bernilai X)**, dan **apabila hadir, maka absensinya akan di centang (bernilai V)**.
 
 Sehingga dari kasus tersebut, didapat dua alternatif kondisi.
@@ -78,28 +82,29 @@ Sehingga dari kasus tersebut, didapat dua alternatif kondisi.
 ```c
 #include <stdio.h>
 #define DATANG 1
+
 int main()
 {
     int hadir = DATANG;
     if (hadir) //jika orang tersebut hadir
     {
         printf("V\n");
-    }else{
+    } else {
         printf("X\n");
     }
 }
 ```
-## Percabangan If-Elseif
+## Percabangan If-Else if
 
 Sintaks yang digunakan dalam percabangan menggunakan `if-else if` adalah sebagai berikut.
 ```c
 if (<Ekspresi/Kondisi>){
 
-		//kode yang akan dieksekusi jika kondisi tersebut benar
+	//kode yang akan dieksekusi jika kondisi tersebut benar
 
 }else if (<Ekspresi/Kondisi>){
 
-		//kode yang akan dieksekusi jika kondisi tersebut salah
+	//kode yang akan dieksekusi jika kondisi tersebut salah
 
 }
 // boleh menambahkan else{} apabila perlu
@@ -109,7 +114,7 @@ Cara kerja percabangan if-else yaitu memeriksa kondisi dalam if.
 - Apabila kondisi pertama tidak memenuhi, maka ia akan memerika kondisi didalam else if, apabila bernilai **TRUE (1)**, maka ia akan **menjalankan perintah dalam bracket tersebut**, apabila tidak maka ia akan menjalankan sequence selanjutnya.
 - Apabila kita menyediakan statement else diakhir, maka ketika **seluruh kondisi** if dan else if tidak memenuhi atau **FALSE (0)**, maka secara otomatis ia akan **menjalankan perintah di dalam else** tersebut.
 
-## Percabangan Case Switch
+## Percabangan Switch-Case
 
 Selain penggunaan statemen if untuk memilih diantara banyak alternatif, terdapat pula statemen switch yang memiliki fungsi yang sama, untuk memilih diantara banyak alternatif berdasarkan sebuah kondisi. Kondisi pada statemen switch berisi ekspresi yang dapat menggunakan sebuah variable tunggal bertipe int atau char yang akan diperiksa nilainya di setiap blok case.
 
@@ -172,15 +177,16 @@ Perulangan `while` adalah bentuk perulangan yang paling sederhana. Sintaksnya ad
 //initial value i.e. i=0
 while (<Ekspresi/Kondisi>) {
 	// Potongan kode yang ingin dieksekusi
-		.
-		.
-		.
-		// increment/decrement i.e. i++
+	.
+	.
+	.
+	// increment/decrement misalnya, i++
 }
 ```
 Cara kerja perulangan while mirip dengan if. Jika pada **if** potongan kode akan dieksekusi **sekali saja** apabila ekspresi/kondisi bernilai **TRUE**, pada **while** potongan kode akan **terus dieksekusi** hingga ekspresi/kondisi menghasilkan **FALSE**.
 
-### Contoh
+Contoh
+
 ```c
 #include <stdio.h>
 int main()
@@ -212,7 +218,8 @@ do {
 ```
 Cara kerja dari perulangan `do – while` mirip dengan perulangan while. Hanya saja, pada perulangan `do – while`, potongan kode dijamin akan dieksekusi tepat satu kali sebelum mengevaluasi ekspresi/kondisi.
 
-### Contoh
+Contoh
+
 ```c
 #include <stdio.h>
 int main()
@@ -243,7 +250,8 @@ Cara kerjanya adalah sebagai berikut :
 - Setelah potongan kode selesai dieksekusi, akan mengeksekusi bagian `end_statement`. Biasanya bagian ini digunakan sebagai **increment/decrement**.
 - Lalu akan **mengevaluasi ekspresi/kondisi lagi**, dan begitu seterusnya.
 
-### Contoh
+Contoh
+
 ```c
 #include <stdio.h>
 int main()
@@ -278,7 +286,9 @@ for (init_statement1; kondisi1/ekspresi1; end_statement1) {
 Keyword `break` dan `continue` digunakan untuk mengendalikan (kontrol) alur pada perulangan. Berikut penjelasannya.
 ## Break
 Perintah `break` digunakan untuk **menghentikan** perulangan (secara paksa). Apabila perintah `break` pada suatu perulangan dijalankan, maka perulangan tersebut akan **dihentikan (secara paksa) dari titik dimana perintah break muncul**.
-### Contoh
+
+Contoh
+
 ```c
 #include <stdio.h>
 
@@ -299,7 +309,8 @@ int main()
 ## Continue
 Kebalikan dari perintah break, perintah `continue` digunakan untuk **melanjutkan perulangan**. Pada perulangan, apabila menemui perintah `continue`, maka perintah-perintah di bawah `continue` akan **diabaikan** dan **kembali akan mengevaluasi ekspresi/kondisi**. Sedangkan pada perulangan for akan langsung mengekekusi bagian end_statement kemudian mengevaluasi ekspresi/kondisi.
 
-### Contoh
+Contoh
+
 ```c
 #include <stdio.h>
 
@@ -318,22 +329,48 @@ int main()
 ```
 
 # Latihan Soal
-Harap tidak melakukan tindakan plagiarisme dalam pengerjaan !
+_Harap tidak melakukan tindakan **plagiarisme** dalam pengerjaan !_
+
 1. Buat program yang mengoutputkan kata-kata `Ganjil` untuk bilangan ganjil, dan kata-kata `Genap` untuk bilangan genap dari sebuah input, contoh
+
+    Input
+
     ```
-    Input  : 1
-    Output : Ganjil
+    1
     ```
-2. Buat program untuk mengoutputkan asterisk, `*`, untuk bilangan genap, dan angka asli untuk bilangan ganjil, dari n buah bilangan mulai 1 s.d n, contoh
+
+    Output
+
+    ```
+    Ganjil
+    ```
+
+2. Buat program untuk mengoutputkan asterisk, `*`, untuk bilangan genap, dan bilangan aslinya untuk bilangan ganjil, dari n buah bilangan mulai 1 s.d n, contoh
+
+    Input
+
+    ```
+    6
+    ```
+
+    Output
+
+    ```
+    1 * 3 * 5 *
+    ```
     
-    ```
-    input  : n = 6
-    output : 1 * 3 * 5 *
-    ```
 3. Buat program untuk mengoutputkan asterisk, `*`, untuk bilangan prima, dan angka asli untuk bilangan non-prima dari n buah bilangan mulai 2 s.d n, contoh
+
+    Input
+
     ```
-    input  : n = 10
-    output : * * 4 * 6 * 8 9 10
+    10
+    ```
+
+    Output
+
+    ```
+    * * 4 * 6 * 8 9 10
     ```
 
 ## Referensi
