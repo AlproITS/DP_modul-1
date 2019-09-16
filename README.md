@@ -364,7 +364,7 @@ int main()
 
 # Infinite Loop
 
-Infinite loop adalah kasus dimana perulangan tidak akan pernah berhenti. Hal ini terjadi karena perulangan tidak pernah menemui kondisi yang membuatnya berhenti. Contoh di bawah akan menghasilkan infinite loop.
+Infinite loop adalah kasus dimana perulangan tidak akan pernah berhenti. Hal ini terjadi karena perulangan tidak akan pernah menemui kondisi yang membuatnya berhenti. Contoh di bawah akan menghasilkan infinite loop.
 
 ```c
 #include <stdio.h>
