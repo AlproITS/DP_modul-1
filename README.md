@@ -185,6 +185,30 @@ int main()
 ```
 Dalam contoh diatas, **ekspresi** yang digunakan adalah **PlatNomor**, dimana **case-case** nya adalah, huruf plat nomor tersebut, L,B,D,N, dan sebagainya
 
+## Operator Kondisional (` ? : `)
+
+Operator kondisional mempunyai bentuk sintaks
+
+```
+<ekspresi/>kondisi> ? instruksi jika TRUE : intruksi jika FALSE;
+```
+Operator kondisional adalah satu-satunya operator ternary dalam bahasa C. Operator kondisional bertingkah seperti layaknya percabangan `if - else`. Ekspresi/kondisi yang akan dievaluasi diletakkan sebelum tanda tanya (`?`). Apabila menghasilkan TRUE, akan menjalankan bagian di kiri tanda titik dua. Jika FALSE, akan menjalankan bagian di kanan tanda titik dua.
+
+Contoh :
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int mark;
+    
+    scanf("%d", &mark);
+    printf(mark >= 75 ? "Lulus\n" : "Tidak Lulus\n");
+    return 0;
+}
+```
+
 # Perulangan
 Perulangan atau looping memungkinkan kita untuk mengeksekusi potongan kode berulang-ulang hingga mencapai suatu kondisi. Ada 3 jenis perulangan dalam bahasa C, yaitu `while`, `do - while`, dan `for`.
 
