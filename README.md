@@ -21,7 +21,7 @@ Control Flow adalah cara kita mengatur jalan penyataan, instruksi, dan pemanggil
 # Percabangan
 Percabangan memungkinkan kita untuk menentukan kode manakah yang akan kita eksekusi berdasarkan suatu kondisi. Percabangan di bahasa C ada 4, yaitu `if`, `if-else`, `if-else if`, dan `switch`.
 
-## Percabangan IF
+## Percabangan If
 
 Sintaks yang digunakan dalam percabangan menggunakan `if` adalah sebagai berikut.
 ```c
@@ -54,6 +54,11 @@ int main()
     }
 }
 ```
+Output
+```
+Lampu Indikator menyala!
+```
+
 ## Percabangan If Else
 
 Sintaks yang digunakan dalam percabangan menggunakan `if-else` adalah sebagai berikut.
@@ -94,15 +99,20 @@ int main()
     }
 }
 ```
+Output
+```
+V
+```
+
 ## Percabangan If-Else if
 
 Sintaks yang digunakan dalam percabangan menggunakan `if-else if` adalah sebagai berikut.
 ```c
-if (<Ekspresi/Kondisi>){
+if (<Ekspresi/Kondisi>) {
 
     //kode yang akan dieksekusi jika kondisi tersebut benar
 
-}else if (<Ekspresi/Kondisi>){
+}else if (<Ekspresi/Kondisi>) {
 
     //kode yang akan dieksekusi jika kondisi tersebut salah
 
@@ -122,24 +132,28 @@ Sintaks untuk Case Switch:
 ```c
 switch(ekspresi) {
 
-   case ekspresi-konstan  :
-      statement;
-      break;
+    case ekspresi-konstan  :
+        statement;
+        break;
 
-   case ekspresi-konstan  :
-      statement;
-      break;  
-   /* anda bisa memiliki jumlah case sebanyak mungkin */
-   
-   // default ketika tidak ada case yang memenuhi
-   default : 
-        statement(s);
+    case ekspresi-konstan  :
+        statement;
+        break;
+  
+    /* anda bisa memiliki jumlah case sebanyak mungkin */
+
+    // default ketika tidak ada case yang memenuhi
+    default : 
+        statement;
 }
 ```
 Setiap blok, case harus ditambahkan statement **``break``**, karena apabila tidak maka ia akan tetap menjalankan blok case dibawahnya hingga bertemu break lain atau pada akhir blok switch.
-### Contoh
+
+Contoh
+
 ```c
 #include <stdio.h>
+
 int main()
 {
     char platNomor;
@@ -150,16 +164,19 @@ int main()
         case 'L':
             printf("Surabaya");
             break;
+
         case 'B':
-        case 'b':
             printf("Jakarta");
             break;
+
         case 'D':
             printf("Bandung");
             break;
+
         case 'N':
             printf("Malang/Lumajang");
             break;
+
         default:
             printf("Karakter plat nomor tidak diketahui");
     } 
@@ -173,8 +190,9 @@ Perulangan atau looping memungkinkan kita untuk mengeksekusi potongan kode berul
 
 ## Perulangan While
 Perulangan `while` adalah bentuk perulangan yang paling sederhana. Sintaksnya adalah sebagai berikut.
+
 ```c
-//initial value i.e. i=0
+//initial value misal, i = 0
 while (<Ekspresi/Kondisi>) {
     // Potongan kode yang ingin dieksekusi
     .
@@ -189,6 +207,7 @@ Contoh
 
 ```c
 #include <stdio.h>
+
 int main()
 {
     int i = 0;
@@ -200,13 +219,16 @@ int main()
     return 0;
 }
 ```
-Sehingga pada contoh diatas, 
-- Pada awalnya, **variabel i** bernilai 0. 
+
+Sehingga pada contoh diatas :
+
+- Pada awalnya, **variabel `i`** bernilai 0. 
 - Sequence selanjutnya adalah while, dan i bernilai kurang dari 10 (**TRUE**), maka kode didalam while akan dijalankan, yakni print Hello world ke-i. 
 - Setelah melakukan print hello world, variabel **i** akan di increment, dan kembali ke statement while untuk memeriksa apakah **i** masih kurang dari 10 setelah diincrement
-- Karena setelah **i** diincrement nilainya masih 1 dan kurang dari 10, maka while akan dijalankan lagi hingga **i** bernilai 10 yang berarti tidak memenuhi kondisi while.
+- Karena setelah **`i`** di-increment nilainya masih 1 dan kurang dari 10, maka while akan dijalankan lagi hingga **`i`** bernilai 10 yang berarti tidak memenuhi kondisi while.
 
 ## Perulangan Do-While
+
 Sintaks dari perulangan `do – while` adalah sebagai berikut.
 ```c
 do {
@@ -216,6 +238,7 @@ do {
     // increment/decrement
 } while (<Ekspresi/Kondisi>)
 ```
+
 Cara kerja dari perulangan `do – while` mirip dengan perulangan while. Hanya saja, pada perulangan `do – while`, potongan kode dijamin akan dieksekusi tepat satu kali sebelum mengevaluasi ekspresi/kondisi.
 
 Contoh
@@ -236,17 +259,20 @@ int main()
 ```
 
 ## Perulangan For
+
 Perulangan `for` merupakan perulangan paling rumit diantara perulangan lainnya. Sintaksnya adalah sebagai berikut.
+
 ```c
 for (init_statement; kondisi/ekspresi; end_statement) {
-//  Potongan kode yang dieksekusi
-.
-.
+    //  Potongan kode yang dieksekusi
+    .
+    .
 }
 ```
+
 Cara kerjanya adalah sebagai berikut :
 - Bagian `init_statement` digunakan untuk inisialisasi variabel yang akan digunakan dalam perulangan. Bagian ini hanya dijalankan sekali saka pada saat awal perulangan.
-- Selanjutnya `kondisi/ekspresi` akan dievaluasi. Jika menghasilkan **TRUE**, maka akan mengeksekusi potongan kode. Jika menghasilkan **FASLE**, perulangan berhenti.
+- Selanjutnya `kondisi/ekspresi` akan dievaluasi. Jika menghasilkan **TRUE**, maka akan mengeksekusi potongan kode. Jika menghasilkan **FALSE**, perulangan berhenti.
 - Setelah potongan kode selesai dieksekusi, akan mengeksekusi bagian `end_statement`. Biasanya bagian ini digunakan sebagai **increment/decrement**.
 - Lalu akan **mengevaluasi ekspresi/kondisi lagi**, dan begitu seterusnya.
 
@@ -269,16 +295,23 @@ int main()
 4. Setelah command dalam block for selesai dijalankan, maka variabel i akan diincrement, dan di periksa lagi.
 5. Apabila i kurang dari 10, maka command dalam block dieksekusi, apabila tidak maka for loop akan berhenti
 
-## Variasi Loop dan Conditions
-### Nested
-Sama seperti halnya percabangan, perulangan juga dapat dibuat secara bersarang, tentu saja menyesuaikan kebutuhan. Contoh sintaks perulangan bersarang adalah sebagai berikut. 
+## Perulangan/Percabangan Bersarang (Nested)
+
+Percabangan dan Perulangan juga dapat dibuat secara bersarang (membuat percabangan/perulangan di dalam percabangan/perulangan), tentu saja menyesuaikan kebutuhan. Contoh berikut adalah perulangan `for` bersarang.
 ```c
-for (init_statement1; kondisi1/ekspresi1; end_statement1) {
-    for (init_statement2; kondisi2/ekspresi2; end_statement2) {
-        //  Potongan kode yang dieksekusi
-        .
-        .
+int i, j;
+for (i = 1; i <= 10; ++i) {
+    // Statement yang ingin dijalankan pada level terluar
+
+    for (j = 1; j <= 10; j++) {
+        // Statement yang ingin dijalankan pada level terdalam
+
+        // Percabangan di dalam perulangan
+        if (i == 10) {
+            // Lakukan sesuatu
+        }
     }
+    // Statement yang ingin dijalankan pada level terluar
 }
 ```
 
@@ -307,6 +340,7 @@ int main()
 ```
 
 ## Continue
+
 Kebalikan dari perintah break, perintah `continue` digunakan untuk **melanjutkan perulangan**. Pada perulangan, apabila menemui perintah `continue`, maka perintah-perintah di bawah `continue` akan **diabaikan** dan **kembali akan mengevaluasi ekspresi/kondisi**. Sedangkan pada perulangan for akan langsung mengekekusi bagian end_statement kemudian mengevaluasi ekspresi/kondisi.
 
 Contoh
@@ -317,15 +351,31 @@ Contoh
 int main()
 {
 	int i;
-    for (i = 1; i <= 6; i++){
-	printf("%d\n",i);
+    for (i = 1; i <= 6; i++) {
+	    // Jika i adalah 4, maka abaikan perintah printf()
         if (i == 4) {
             continue;
         }
+        printf("%d\n",i);
     }
     return 0;
 }
+```
 
+# Infinite Loop
+
+Infinite loop adalah kasus dimana perulangan tidak akan pernah berhenti. Hal ini terjadi karena perulangan tidak pernah menemui kondisi yang membuatnya berhenti. Contoh di bawah akan menghasilkan infinite loop.
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    for (i = 1; i <= 100; i--) {
+        // Perulangan tak akan pernah berhenti
+    }
+}
 ```
 
 # Latihan Soal
