@@ -6,7 +6,7 @@
     + [If](#percabangan-if)
     + [If-Else](#percabangan-if-else)
     + [If-Else if](#percabangan-if-elseif)
-    + [Case Switch](#percabangan-case-switch)
+    + [Switch-Case](#percabangan-switch-case)
 - [Perulangan](#perulangan)
     + [While](#perulangan-while)
     + [Do-While](#perulangan-do-while)
