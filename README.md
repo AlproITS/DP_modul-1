@@ -7,6 +7,7 @@
     + [If-Else](#percabangan-if-else)
     + [If-Else if](#percabangan-if-elseif)
     + [Switch-Case](#percabangan-switch-case)
+    + [Operator Kondisional ( ? : )](#operator-kondisional--)
 - [Perulangan](#perulangan)
     + [While](#perulangan-while)
     + [Do-While](#perulangan-do-while)
@@ -190,7 +191,7 @@ Dalam contoh diatas, **ekspresi** yang digunakan adalah **PlatNomor**, dimana **
 Operator kondisional mempunyai bentuk sintaks
 
 ```
-<ekspresi/>kondisi> ? instruksi jika TRUE : intruksi jika FALSE;
+(ekspresi/kondisi) ? (ekspresi jika TRUE) : (ekspresi jika FALSE);
 ```
 Operator kondisional adalah satu-satunya operator ternary dalam bahasa C. Operator kondisional bertingkah seperti layaknya percabangan `if - else`. Ekspresi/kondisi yang akan dievaluasi diletakkan sebelum tanda tanya (`?`). Apabila menghasilkan TRUE, akan menjalankan bagian di kiri tanda titik dua. Jika FALSE, akan menjalankan bagian di kanan tanda titik dua.
 
@@ -209,10 +210,32 @@ int main()
 }
 ```
 
+Program di atas ekuivalen dengan :
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int mark;
+    
+    scanf("%d", &mark);
+    if (mark >= 75) {
+        printf("Lulus\n");
+    }
+    else {
+        printf("Tidak Lulus\n");
+    }
+    return 0;
+}
+```
+
 # Perulangan
+
 Perulangan atau looping memungkinkan kita untuk mengeksekusi potongan kode berulang-ulang hingga mencapai suatu kondisi. Ada 3 jenis perulangan dalam bahasa C, yaitu `while`, `do - while`, dan `for`.
 
 ## Perulangan While
+
 Perulangan `while` adalah bentuk perulangan yang paling sederhana. Sintaksnya adalah sebagai berikut.
 
 ```c
